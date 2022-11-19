@@ -12,6 +12,7 @@ sudo apt update && sudo apt upgrade
 sudo apt install -y vim
 
 #### enable fingerprint reader ####
+# Found this script from an Elevated Systems youtube video:
 ./FP_Reader_install.sh
 # (later you can do the recommended OS upgrade if you haven't created any fingerprints.
 # just delete all fingerprints before updating if you have created some)
