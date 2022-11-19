@@ -15,25 +15,35 @@ sudo apt install -y vim
 # (later you can do the recommended OS upgrade if you haven't created any fingerprints.
 # just delete all fingerprints before updating if you have created some)
 
+#### 3.5 mm jack microphone enable ####
+sudo vim /etc/modprobe.d/alsa-base.conf
+# in here add
+options snd-hda-intel model=dell-headset-multi
+# save & quit
+
 #### fix brightness buttons ####
 # go into boot loader and blacklist the ambient light sensor
 sudo vim /etc/modprobe.d/framework-als-blacklist.conf
 # in here add 
 blacklist hid_sensor_hub
-# save and run
+# save & quit and run
 sudo update-initramfs -u
 
-#### power savings ####
+#### suspend mode power savings ####
 sudo kernelstub -a nvme.noacpi=1
-
-
-
-
+sudo kernelstub -a mem_sleep_default=deep
 ```
+
+### Update Firmware & Restart
 
 - do recommended firmware update
 - reboot
 - make sure everything is up to date on os and firmware and brightness keys work
+
+### Other Power Savings???
+Not sure if it works, but if you want to you can follow whichever other things you see fit from [framework blog thread](<https://community.frame.work/t/linux-battery-life-tuning/6665>) 
+- I skipped the panel self refresh since after doing all the upgrades my kernel was 6.0.6
+
 
 ## Personal User App Checklist
 
