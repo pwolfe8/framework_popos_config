@@ -7,7 +7,7 @@ changes to make on pop os (starting 22.04) on framework laptop to get full funct
 ```bash
 #### update & upgrade & basic text edit ####
 sudo apt update && sudo apt upgrade
-# if you want it. otherwise nano and others work too
+# vim if you want it. otherwise nano and others work too
 sudo apt install -y vim
 
 #### enable fingerprint reader ####
@@ -30,10 +30,20 @@ sudo update-initramfs -u
 
 ## Personal User App Checklist
 
-- install edge through Pop! Shop or browser
-- install vscode through Pop! Shop or browser
+- install vscode deb through Pop! Shop or browser
   ```bash
   # then install my settings/shortcuts
   git clone git@github.com:pwolfe8/vscode_profile.git
   bash sync_profile_to_linux_settings_dir.sh
   ```
+others
+- audacity
+- cheese
+- slack 
+- spotify
+- steam
+
+
+
+
+
