@@ -15,12 +15,19 @@ sudo apt install -y vim
 # (later you can do the recommended OS upgrade if you haven't created any fingerprints.
 # just delete all fingerprints before updating if you have created some)
 
+#### fix brightness buttons ####
 # go into boot loader and blacklist the ambient light sensor
 sudo vim /etc/modprobe.d/framework-als-blacklist.conf
 # in here add 
 blacklist hid_sensor_hub
 # save and run
 sudo update-initramfs -u
+
+#### power savings ####
+sudo kernelstub -a nvme.noacpi=1
+
+
+
 
 ```
 
