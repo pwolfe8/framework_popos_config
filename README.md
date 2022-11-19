@@ -60,6 +60,13 @@ others
 - spotify
 - steam
 
+## Tips
+
+- to reboot into bios:
+    ```
+    systemctl reboot --firmware-setup
+    ```
+
 
 
 
