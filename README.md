@@ -1,5 +1,6 @@
-# framework_popos_config
-changes to make on pop os (starting 22.04) on framework laptop to get full functionality 
+# Framework Laptop, Pop! OS 22.04 Config
+
+Changes to make on Pop! OS 22.04 installation on Framework laptop to get full functionality.
 
 
 ## Basics
@@ -66,6 +67,16 @@ others
     ```
     systemctl reboot --firmware-setup
     ```
+
+## Troubleshooting
+
+### Audio
+
+If pipewire gets masked during some upgrade somehow:
+```bash
+sudo apt reinstall pipewire pipewire-bin pipewire-pulse
+systemctl --user --now enable pipewire pipewire-pulse
+```
 
 
 
